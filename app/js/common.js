@@ -43,12 +43,12 @@ $(document).ready(function() {
 		loop: false
 	});
 
-	$('.slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		asNavFor: '.slider',
-		dots: true,
-		focusOnSelect: true
-	});
+	// $('.slider').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	asNavFor: '.slider',
+	// 	dots: true,
+	// 	focusOnSelect: true
+	// });
 
 });

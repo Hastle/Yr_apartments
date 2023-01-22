@@ -5610,7 +5610,63 @@ i {
 }
 
 /*==========  General  ==========*/
+.primary-btn {
+  display: inline-block;
+  padding: 10px;
+  color: #fefefe;
+  border: 1px solid #fefefe;
+}
+
 /*==========  Header  ==========*/
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+#main .top-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+#main .top-navigation:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fefefe;
+  border-radius: 2px;
+}
+#main .top-navigation .main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#main .top-navigation ul, #main .top-navigation li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+#main .top-navigation .menu-item, #main .top-navigation .logo {
+  color: #fefefe;
+  font-family: "Robotobold";
+  padding: 10px;
+}
+
 /*==========  Media  ==========*/
 /*==========  Desktop First Method  ==========*/
 @media only screen and (max-width: 1200px) {
