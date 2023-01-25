@@ -9,6 +9,7 @@ body
 	background-color: $white
 	+regular
 a
+	color: $black
 	text-decoration: none
 	outline: none
 	outline-style: none
@@ -54,11 +55,43 @@ button:focus
 i
 	vertical-align: middle
 /*==========  General  ==========*/
+section
+	padding: 110px 0
+	background-color: $white
 .primary-btn
 	display: inline-block
+	text-align: center
 	padding: 10px
 	color: $white
 	border: 1px solid $white
+h3
+	+regular
+	text-align: center
+	font-size: 35px	
+	margin: 0 0 6rem
+	color: $black
+	&:after
+		content: ""
+		position: absolute	
+		left: 50%
+		transform: translateX(-50%)
+		top: 60px
+		width: 100px	
+		height: 1px	
+		background-color: $black	
+h4
+	color: $dark
+	+regular
+	font-size: 20px
+p
+	color: $dark
+	+regular
+	font-size: 16px
+	text-align: center
+.mx-auto
+	margin: auto !important
+.mb-3
+	margin-bottom: 3rem !important
 /*==========  Header  ==========*/
 #main
 	display: flex
@@ -68,7 +101,7 @@ i
 		height: 100px
 		width: 100%
 		align-items: center
-		justify-content: space-between
+		//justify-content: space-between
 		position: relative
 		&:before
 			content: ''
@@ -81,14 +114,62 @@ i
 			border-radius: 2px
 		.main-menu
 			display: flex
-		ul,li
+			width: 100%
+			justify-content: space-between
+			align-items: center
+		ul
 			display: flex
 			margin: 0
 			list-style: none
 			text-decoration: none
-		.menu-item,.logo
+		li
+			display: flex
+		.menu-item
 			color: $white
+			text-transform: uppercase
+			font-size: 14px
 			+bold
 			padding: 10px
+		.logo
+			color: $white
+			padding: 10px
+			font-size: 22px
+/*==========  Apartments  ==========*/
+#apartments
+	background-color: $light
+	.apartment-card
+		background-color: #fff
+		+flow
+		&:hover
+			+box-shadow
+			+flow
+			img
+				transform: scale(1.1)
+				+flow
+		a.thumbnail
+			display: flex
+			overflow: hidden
+			position: relative
+		img
+			min-height: 308px
+			width: auto
+			+flow
+		.apartment-card-body
+			padding: 30px
+			h4
+				margin: 0
+			a
+				color: $dark
+/*==========  About  ==========*/
+#about
+	h3
+		text-align: left
+		&:after
+			left: 15%
+	p
+		text-align: left
+		&:last-child
+			a
+				color: $acent
 /*==========  Media  ==========*/
 @import "media"

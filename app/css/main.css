@@ -2,20 +2,20 @@
 @import "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
 @import "https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css";
 @font-face {
-  font-family: "RobotoRegular";
-  src: url("../fonts/RobotoRegular/RobotoRegular.ttf");
+  font-family: "RubikRegular";
+  src: url("../fonts/RubikRegular/RubikRegular.ttf");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: "RobotoLight";
-  src: url("../fonts/RobotoLight/RobotoLight.ttf");
+  font-family: "RubikLight";
+  src: url("../fonts/RubikLight/RubikLight.ttf");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  font-family: "RobotoBold";
-  src: url("../fonts/RobotoBold/RobotoBold.ttf");
+  font-family: "RubikBold";
+  src: url("../fonts/RubikBold/RubikBold.ttf");
   font-style: normal;
   font-weight: normal;
 }
@@ -5535,10 +5535,11 @@ template {
 body {
   margin: 0;
   background-color: #fefefe;
-  font-family: "RobotoRegular";
+  font-family: "RubikRegular";
 }
 
 a {
+  color: #222;
   text-decoration: none;
   outline: none;
   outline-style: none;
@@ -5610,11 +5611,58 @@ i {
 }
 
 /*==========  General  ==========*/
+section {
+  padding: 110px 0;
+  background-color: #fefefe;
+}
+
 .primary-btn {
   display: inline-block;
+  text-align: center;
   padding: 10px;
   color: #fefefe;
   border: 1px solid #fefefe;
+}
+
+h3 {
+  font-family: "RubikRegular";
+  text-align: center;
+  font-size: 35px;
+  margin: 0 0 6rem;
+  color: #222;
+}
+h3:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 60px;
+  width: 100px;
+  height: 1px;
+  background-color: #222;
+}
+
+h4 {
+  color: #445963;
+  font-family: "RubikRegular";
+  font-size: 20px;
+}
+
+p {
+  color: #445963;
+  font-family: "RubikRegular";
+  font-size: 16px;
+  text-align: center;
+}
+
+.mx-auto {
+  margin: auto !important;
+}
+
+.mb-3 {
+  margin-bottom: 3rem !important;
 }
 
 /*==========  Header  ==========*/
@@ -5633,9 +5681,6 @@ i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: relative;
 }
 #main .top-navigation:before {
@@ -5652,8 +5697,15 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-#main .top-navigation ul, #main .top-navigation li {
+#main .top-navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5661,10 +5713,85 @@ i {
   list-style: none;
   text-decoration: none;
 }
-#main .top-navigation .menu-item, #main .top-navigation .logo {
+#main .top-navigation li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#main .top-navigation .menu-item {
   color: #fefefe;
-  font-family: "Robotobold";
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "RubikBold";
   padding: 10px;
+}
+#main .top-navigation .logo {
+  color: #fefefe;
+  padding: 10px;
+  font-size: 22px;
+}
+
+/*==========  Apartments  ==========*/
+#apartments {
+  background-color: #f8f9fa;
+}
+#apartments .apartment-card {
+  background-color: #fff;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+#apartments .apartment-card:hover {
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+#apartments .apartment-card:hover img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+#apartments .apartment-card a.thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+#apartments .apartment-card img {
+  min-height: 308px;
+  width: auto;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+#apartments .apartment-card .apartment-card-body {
+  padding: 30px;
+}
+#apartments .apartment-card .apartment-card-body h4 {
+  margin: 0;
+}
+#apartments .apartment-card .apartment-card-body a {
+  color: #445963;
+}
+
+/*==========  About  ==========*/
+#about h3 {
+  text-align: left;
+}
+#about h3:after {
+  left: 15%;
+}
+#about p {
+  text-align: left;
+}
+#about p:last-child a {
+  color: #f23a2e;
 }
 
 /*==========  Media  ==========*/
@@ -5676,7 +5803,26 @@ i {
   /* Medium Devices, Desktops */
 }
 @media only screen and (max-width: 768px) {
-  /* Small Devices, Tablets */
+  #main .top-navigation .main-menu {
+    display: none;
+  }
+  #main .top-navigation:before {
+    height: 0;
+  }
+  #about h3 {
+    text-align: center;
+  }
+  #about h3:after {
+    left: 50%;
+  }
+  #about p:last-child {
+    text-align: center;
+  }
+  #apartments .apartment-card img {
+    height: auto;
+    min-height: auto;
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 480px) {
   /* Extra Small Devices, Phones */

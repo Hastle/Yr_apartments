@@ -43,6 +43,18 @@ $(document).ready(function() {
 		loop: false
 	});
 
+	$('[data-fancybox]').fancybox({
+		
+	});
+
+	$('.popup-vimeo').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+    });
+
 	// $('.slider').slick({
 	// 	slidesToShow: 1,
 	// 	slidesToScroll: 1,
