@@ -42,7 +42,7 @@ var jsfiles = [
 'app/libs/magnific-popup/magnific-popup.min.js',
 'app/libs/scroll2id/pagescroll2id.min.js',
 'app/libs/wow/wow.min.js',
-//'app/libs/slick/slick.min.js',
+'app/libs/tiny-slider/tiny-slider.min.js',
 'app/libs/fancybox/fancybox.min.js'
 ];
 
