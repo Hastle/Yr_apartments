@@ -55,12 +55,32 @@ $(document).ready(function() {
 		preloader: false,
     });
 
+	var slider = tns({
+		container: '.slider',
+		items: 3,
+		swipeAngle: true,
+		controls: true,
+		slideBy: 'page',
+		speed: 700,
+		arrowKeys: true,
+		mouseDrag: true,
+		autoplay: false,
+		nav: true,
+		navPosition: 'bottom',
+		prevButton: '.slider-prev',
+		nextButton: '.slider-next',
+	});
+
 	// $('.slider').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
+	// 	slidesToShow: 3,
+	// 	slidesToScroll: 3,
 	// 	asNavFor: '.slider',
+	// 	speed: 450,
 	// 	dots: true,
-	// 	focusOnSelect: true
+	// 	cssEase: 'linear',
+	// 	focusOnSelect: true,
+	// 	nextArrow: '<button type="button" class="slider-next"><i class="fa fa-arrow-right"></i></button>',
+	// 	prevArrow: '<button type="button" class="slider-prev"><i class="fa fa-arrow-left"></i></button>'
 	// });
 
 });
