@@ -4797,7 +4797,170 @@ html {
           animation-name: slideOutUp;
 }
 
-/* Magnific Popup CSS */
+.tns-outer {
+  padding: 0 !important;
+}
+
+.tns-outer [hidden] {
+  display: none !important;
+}
+
+.tns-outer [aria-controls], .tns-outer [data-action] {
+  cursor: pointer;
+}
+
+.tns-slider {
+  -webkit-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
+}
+
+.tns-slider > .tns-item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tns-horizontal.tns-subpixel {
+  white-space: nowrap;
+}
+
+.tns-horizontal.tns-subpixel > .tns-item {
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.tns-horizontal.tns-no-subpixel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tns-horizontal.tns-no-subpixel > .tns-item {
+  float: left;
+}
+
+.tns-horizontal.tns-carousel.tns-no-subpixel > .tns-item {
+  margin-right: -100%;
+}
+
+.tns-no-calc {
+  position: relative;
+  left: 0;
+}
+
+.tns-gallery {
+  position: relative;
+  left: 0;
+  min-height: 1px;
+}
+
+.tns-gallery > .tns-item {
+  position: absolute;
+  left: -100%;
+  -webkit-transition: transform 0s, opacity 0s;
+  -webkit-transition: opacity 0s, -webkit-transform 0s;
+  transition: opacity 0s, -webkit-transform 0s;
+  -o-transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s, -webkit-transform 0s;
+}
+
+.tns-gallery > .tns-slide-active {
+  position: relative;
+  left: auto !important;
+}
+
+.tns-gallery > .tns-moving {
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.tns-autowidth {
+  display: inline-block;
+}
+
+.tns-lazy-img {
+  -webkit-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  opacity: 0.6;
+}
+
+.tns-lazy-img.tns-complete {
+  opacity: 1;
+}
+
+.tns-ah {
+  -webkit-transition: height 0s;
+  -o-transition: height 0s;
+  transition: height 0s;
+}
+
+.tns-ovh {
+  overflow: hidden;
+}
+
+.tns-visually-hidden {
+  position: absolute;
+  left: -10000em;
+}
+
+.tns-transparent {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tns-fadeIn {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  z-index: 0;
+}
+
+.tns-normal, .tns-fadeOut {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: -1;
+}
+
+.tns-vpfix {
+  white-space: nowrap;
+}
+
+.tns-vpfix > div, .tns-vpfix > li {
+  display: inline-block;
+}
+
+.tns-t-subp2 {
+  margin: 0 auto;
+  width: 310px;
+  position: relative;
+  height: 10px;
+  overflow: hidden;
+}
+
+.tns-t-ct {
+  width: 2333.3333333%;
+  width: -moz-calc(100% * 70 / 3);
+  width: 2333.3333333333%;
+  position: absolute;
+  right: 0;
+}
+
+.tns-t-ct:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tns-t-ct > div {
+  width: 1.4285714%;
+  width: -moz-calc(100% / 70);
+  width: 1.4285714286%;
+  height: 10px;
+  float: left;
+} /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
   left: 0;
@@ -5645,9 +5808,10 @@ h3:after {
 }
 
 h4 {
-  color: #445963;
   font-family: "RubikRegular";
+  text-align: center;
   font-size: 20px;
+  color: #445963;
 }
 
 p {
@@ -5781,6 +5945,34 @@ p {
 }
 
 /*==========  About  ==========*/
+#about .img-border {
+  position: relative;
+}
+#about .icon-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#about .icon-wrap i {
+  font-size: 40px;
+  color: #fefefe;
+}
 #about h3 {
   text-align: left;
 }
@@ -5788,9 +5980,55 @@ p {
   left: 15%;
 }
 #about p {
+  color: rgba(0, 0, 0, 0.5);
   text-align: left;
 }
 #about p:last-child a {
+  color: #f23a2e;
+}
+
+/*==========  Reviews  ==========*/				
+#reviews {
+  background-color: #f8f9fa;
+}
+#reviews .slider-container {
+  position: relative;
+}
+#reviews .slider-next, #reviews .slider-prev {
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  padding: 5px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  cursor: pointer;
+  font-size: 23px;
+  color: #222;
+}
+#reviews .slider-prev {
+  left: -60px;
+}
+#reviews .slider-next {
+  right: -60px;
+}
+#reviews .review-item {
+  padding: 1.5rem;
+}
+#reviews .review-item h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+#reviews .review-item p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+#reviews .review-item p:last-of-type {
+  margin-top: 10px;
+  text-align: left;
+}
+#reviews .review-item p span {
+  text-align: right;
   color: #f23a2e;
 }
 
