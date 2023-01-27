@@ -5766,7 +5766,7 @@ button:focus {
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 i {
@@ -5774,7 +5774,7 @@ i {
 }
 
 /*==========  General  ==========*/
-section {
+section, footer {
   padding: 110px 0;
   background-color: #fefefe;
 }
@@ -5785,6 +5785,28 @@ section {
   padding: 10px;
   color: #fefefe;
   border: 1px solid #fefefe;
+  font-family: "RubikRegular";
+}
+
+.chief-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 15px;
+  color: #fefefe;
+  background-color: #f23a2e;
+  border-radius: 30px;
+  font-family: "RubikRegular";
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.chief-btn:hover {
+  background-color: #eb1c0f;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 h3 {
@@ -5825,8 +5847,18 @@ p {
   margin: auto !important;
 }
 
+.mt-3 {
+  margin-top: 3rem !important;
+}
+
 .mb-3 {
   margin-bottom: 3rem !important;
+}
+
+.logo {
+  color: #fefefe;
+  padding: 10px;
+  font-size: 22px;
 }
 
 /*==========  Header  ==========*/
@@ -5835,6 +5867,13 @@ p {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 #main .top-navigation {
   display: -webkit-box;
@@ -5889,10 +5928,21 @@ p {
   font-family: "RubikBold";
   padding: 10px;
 }
-#main .top-navigation .logo {
-  color: #fefefe;
+#main .main-search {
+  background-color: #fefefe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: 250px;
+  width: 100%;
+  height: 50px;
   padding: 10px;
-  font-size: 22px;
+  border-radius: 5px;
+}
+#main .main-search select {
+  outline: none;
+  margin-right: 30px;
 }
 
 /*==========  Apartments  ==========*/
@@ -6030,6 +6080,76 @@ p {
 #reviews .review-item p span {
   text-align: right;
   color: #f23a2e;
+}
+
+/*==========  Footer  ==========*/
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+footer h5 {
+  font-size: 20px;
+  color: #fefefe;
+  margin: 0;
+  font-family: "RubikRegular";
+  font-weight: normal;
+  text-align: left;
+}
+footer p {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer .logo {
+  font-size: 20px;
+}
+footer .chief-btn {
+  margin-top: 10px;
+}
+footer .footer-list {
+  list-style: none;
+  padding: 0;
+}
+footer .footer-list li {
+  margin-bottom: 10px;
+}
+footer .footer-list a {
+  font-family: "RubikRegular";
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+footer .footer-list a:hover {
+  color: #fefefe;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+footer .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .social-links a {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  font-size: 20px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+footer .social-links a:hover {
+  color: #fefefe;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+footer .copyright p {
+  text-align: center;
+  margin: 0;
 }
 
 /*==========  Media  ==========*/

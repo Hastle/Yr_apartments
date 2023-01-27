@@ -51,11 +51,11 @@ button:focus
 	padding-right: 0
 	padding-left: 0
 .text-center
-	text-align: center
+	text-align: center !important
 i
 	vertical-align: middle
 /*==========  General  ==========*/
-section
+section, footer
 	padding: 110px 0
 	background-color: $white
 .primary-btn
@@ -64,6 +64,20 @@ section
 	padding: 10px
 	color: $white
 	border: 1px solid $white
+	+regular
+.chief-btn
+	display: inline-block
+	text-align: center
+	padding: 10px 15px
+	color: $white
+	background-color: $acent
+	border-radius: 30px
+	+regular
+	+flow
+	&:hover
+		background-color: #eb1c0f
+		+box-shadow
+		+flow
 h3
 	+regular
 	text-align: center
@@ -91,12 +105,20 @@ p
 	text-align: center
 .mx-auto
 	margin: auto !important
+.mt-3
+	margin-top: 3rem !important
 .mb-3
 	margin-bottom: 3rem !important
+.logo
+	color: $white
+	padding: 10px
+	font-size: 22px
 /*==========  Header  ==========*/
 #main
 	display: flex
 	height: 100vh
+	flex-direction: column
+	justify-content: space-between
 	.top-navigation
 		display: flex
 		height: 100px
@@ -131,10 +153,18 @@ p
 			font-size: 14px
 			+bold
 			padding: 10px
-		.logo
-			color: $white
-			padding: 10px
-			font-size: 22px
+	.main-search
+		background-color: $white
+		display: flex
+		position: relative
+		bottom: 250px
+		width: 100%
+		height: 50px
+		padding: 10px
+		border-radius: 5px
+		select
+			outline: none
+			margin-right: 30px
 /*==========  Apartments  ==========*/
 #apartments
 	background-color: $light
@@ -225,5 +255,50 @@ p
 			span
 				text-align: right
 				color: $acent
+/*==========  Footer  ==========*/
+footer
+	background-color: rgba(0, 0, 0, 0.8)
+	h5
+		font-size: 20px
+		color: $white
+		margin: 0
+		+regular
+		font-weight: normal
+		text-align: left
+	p
+		text-align: left
+		color: rgba(255, 255, 255, 0.5)
+	.logo
+		font-size: 20px
+	.chief-btn
+		margin-top: 10px
+	.footer-list
+		list-style: none
+		padding: 0
+		li
+			margin-bottom: 10px
+		a
+			+regular
+			font-size: 16px
+			color: rgba(255, 255, 255, 0.5)
+			+flow
+			&:hover
+				color: $white
+				+flow
+	.social-links
+		display: flex
+		justify-content: center
+		a
+			color: rgba(255, 255, 255, 0.5)
+			padding: 0.5rem
+			font-size: 20px
+			+flow
+			&:hover
+				color: $white
+				+flow
+	.copyright
+		p
+			text-align: center
+			margin: 0
 /*==========  Media  ==========*/
 @import "media"
