@@ -69,6 +69,20 @@ $(document).ready(function() {
 		navPosition: 'bottom',
 		prevButton: '.slider-prev',
 		nextButton: '.slider-next',
+		responsive: {
+			1200: {
+				items: 3
+			},
+			992: {
+				items: 2
+			},
+			768: {
+				items: 1
+			},
+			480: {
+				items: 1
+			}
+		}
 	});
 
 	// $('.slider').slick({
